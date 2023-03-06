@@ -83,6 +83,15 @@ static const unsigned short atkbd_set2_keycode[ATKBD_KEYMAP_SIZE] = {
 
 #include "hpps2atkbd.h"	/* include the keyboard scancodes */
 
+
+/*
+*Keyboard scancodes bellow for different keyboards that are the defaults for linux.
+*Find the one that is used for our QWERTY keyboard
+*
+* Scancodes for keys we need to Swap
+*Y = 21, Z = 44, 
+*/
+
 #else
 	  0, 67, 65, 63, 61, 59, 60, 88,  0, 68, 66, 64, 62, 15, 41,117,
 	  0, 56, 42, 93, 29, 16,  2,  0,  0,  0, 44, 31, 30, 17,  3,  0,
@@ -132,6 +141,16 @@ static const unsigned short atkbd_unxlate_table[128] = {
          71, 79, 86, 94,  8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 87,111,
          19, 25, 57, 81, 83, 92, 95, 98, 99,100,101,103,104,106,109,110
 };
+
+
+
+
+
+/*
+*End of Scancode section.
+*We can either choose to edit the default one located above or add an alternative and impliment keyboard scancode setup that works
+*by changing the default pointer to a new scancode set.
+*/
 
 #define ATKBD_CMD_SETLEDS	0x10ed
 #define ATKBD_CMD_GSCANSET	0x11f0
